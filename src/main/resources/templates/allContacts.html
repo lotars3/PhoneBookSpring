@@ -5,15 +5,13 @@
     <title>Książka telefoniczna</title>
 </head>
 <body>
-    <div style="text-align: center">
-        <form action="/allContacts" method="post" th:object="${numberForm}">
-        <tr th:each = "contact : ${contacts}">
-            <td th:name = "contact.name"></td>
-            <td th:surname = "contact.surname"></td>
-            <td th:number = "contact.number"></td>
-        </tr>
-        </form>
-    </div>
+<div style="text-align: center" >
+        <tr th:each="contact : ${contacts}">
+            <td th:text="${contact.getName()}">Imię: </td>
+            <td th:text="${contact.getSurname()}">Nazwisko: </td>
+            <td th:text="${contact.getNumber()}">Numer telefonu: </td><br/>
 
+        </tr>
+</div>
 </body>
 </html>

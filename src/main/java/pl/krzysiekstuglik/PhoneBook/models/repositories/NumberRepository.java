@@ -9,6 +9,7 @@ import java.util.List;
 @Repository
 public interface NumberRepository extends CrudRepository<NumberEntity, Integer>{
     boolean existsByNumber(int number);
+    List<NumberEntity> findAll();
 
 
 }

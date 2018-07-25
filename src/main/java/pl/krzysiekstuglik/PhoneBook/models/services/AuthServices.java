@@ -41,8 +41,8 @@ public class AuthServices {
         return numberEntity;
     }
 
-    public Iterable<NumberEntity> getAll(){
+   public List<NumberEntity> getAll(){
         return numberRepository.findAll();
-    }
+   }
 
 }
