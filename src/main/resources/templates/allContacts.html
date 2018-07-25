@@ -5,13 +5,13 @@
     <title>Książka telefoniczna</title>
 </head>
 <body>
-<div style="text-align: center" >
-        <tr th:each="contact : ${contacts}">
-            <td th:text="${contact.getName()}">Imię: </td>
-            <td th:text="${contact.getSurname()}">Nazwisko: </td>
-            <td th:text="${contact.getNumber()}">Numer telefonu: </td><br/>
-
-        </tr>
+<div style="text-align: center">
+    <tr th:each="contact : ${contacts}">
+        Osoba: <td th:text="${contact.getName()}"></td>
+        <td th:text="${contact.getSurname()}"></td>
+        , numer tel.: <td th:text="${contact.getNumber()}"></td>
+        <br/>
+    </tr>
 </div>
 </body>
 </html>

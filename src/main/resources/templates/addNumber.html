@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Dodawanie numeru</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
 <div style="width: 400px; margin-top: 50px; margin-left: auto; margin-right: auto; padding: 20px">
@@ -15,10 +16,11 @@
         <input th:field="*{name}" type="text" class="form-control" placeholder="Imię">
         <input th:field="*{surname}" type="text" class="form-control" placeholder="Nazwisko">
         <input th:field="*{number}" type="number" class="form-control" placeholder="Numer telefonu">
-        <button type="submit" class="btn btn-default">Dodaj nowy numer</button>
+        <button style="width: 50%" type="submit" class="btn btn-group">Dodaj nowy numer</button>
     </form>
-    <!--dodać przejście do całej ksiązki-->
+    <button onclick="javascript:location.href = '/allContacts'" class="btn btn-default">Pokaż całą książkę</button>
 </div>
+
 
 </body>
 </html>
