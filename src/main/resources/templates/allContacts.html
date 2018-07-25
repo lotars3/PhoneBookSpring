@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Książka telefoniczna</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <form action="/allContacts" method="post" th:object="${numberForm}">
+        <tr th:each = "contact : ${contacts}">
+            <td th:name = "contact.name"></td>
+            <td th:surname = "contact.surname"></td>
+            <td th:number = "contact.number"></td>
+        </tr>
+        </form>
+    </div>
+
+</body>
+</html>

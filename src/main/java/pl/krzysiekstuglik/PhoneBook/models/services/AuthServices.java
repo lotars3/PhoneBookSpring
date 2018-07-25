@@ -7,6 +7,8 @@ import pl.krzysiekstuglik.PhoneBook.models.NumberEntity;
 import pl.krzysiekstuglik.PhoneBook.models.forms.NumberForm;
 import pl.krzysiekstuglik.PhoneBook.models.repositories.NumberRepository;
 
+import java.util.List;
+
 @Service
 public class AuthServices {
 
@@ -38,4 +40,9 @@ public class AuthServices {
         numberEntity.setNumber(numberForm.getNumber());
         return numberEntity;
     }
+
+    public Iterable<NumberEntity> getAll(){
+        return numberRepository.findAll();
+    }
+
 }
