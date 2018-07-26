@@ -19,8 +19,6 @@ public class AuthServices {
         this.numberRepository = numberRepository;
     }
 
-
-
     public boolean tryToAddNumber(NumberForm numberForm){
         if (numberRepository.existsByNumber(numberForm.getNumber())){
             return false;
