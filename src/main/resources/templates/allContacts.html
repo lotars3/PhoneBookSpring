@@ -7,13 +7,25 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-<div style="width: 600px; margin-top: 50px; margin-left: auto; margin-right: auto; padding: 20px">
-    <tr th:each="contact : ${contacts}">
-        <td th:text="${contact.getName()}" class="form-control"></td>
-        <td th:text="${contact.getSurname()}" class="form-control"></td>
-        , numer tel.: <td th:text="${contact.getNumber()}" class="form-control"></td>
-        <br/>
-    </tr>
+<div style="text-align: center">
+    <div class="alert alert-success">
+        <h1>
+            <strong>Księżka telefoniczna</strong>
+        </h1>
+        <h6>
+            <strong>(Kliknij na numer, aby wyświetlić właściciela numeru)</strong>
+        </h6>
+    </div>
+</div>
+<div style="width: 400px; margin-top: 50px; margin-left: auto; margin-right: auto; text-align: center">
+    <div class=" alert alert-danger" th:each="contact : ${contacts}">
+        <a th:href="'allContacts/'+${contact.getId()}">
+            Numer tel: <h3 class="alert-heading" th:text="${contact.getNumber()}"></h3>
+        </a>
+    </div>
+</div>
+<div style="text-align: center">
+    <button  onclick="javascript:location.href = '/addNumber'" class="btn btn-primary">Powrót do menu dodawania nowego kontatu</button>
 </div>
 </body>
 </html>

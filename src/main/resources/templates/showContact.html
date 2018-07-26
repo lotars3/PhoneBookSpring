@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Szczegóły numeru</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="card-body" style="text-align: center; border: blue dot-dot-dash 2px">
+    Numer: <h1 th:text="${numberDetails.getNumber()}"></h1>
+    Imię: <h4 th:text="${numberDetails.getName()}"></h4>
+    Nazwisko: <h4 th:text="${numberDetails.getSurname()}"></h4>
+</div>
+<div style="text-align: center">
+    <button onclick="javascript:location.href = '/addNumber'" class="btn btn-primary">Powrót do menu dodawania nowego
+        kontatu
+    </button>
+</div>
+<div style="text-align: center; padding: 5px">
+    <button  onclick="javascript:location.href = '/allContacts'" class="btn btn-primary">Powrót do książki telefonicznej</button>
+</div>
+
+
+</body>
+</html>

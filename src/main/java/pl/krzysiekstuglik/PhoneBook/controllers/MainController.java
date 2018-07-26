@@ -5,16 +5,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.krzysiekstuglik.PhoneBook.models.forms.NumberForm;
-import pl.krzysiekstuglik.PhoneBook.models.services.AuthServices;
+import pl.krzysiekstuglik.PhoneBook.models.services.MainServices;
 
 @Controller
-public class AuthController {
+public class MainController {
 
-    final AuthServices authServices;
+    final MainServices mainServices;
 
     @Autowired
-    public AuthController(AuthServices authServices) {
-        this.authServices = authServices;
+    public MainController(MainServices mainServices) {
+        this.mainServices = mainServices;
     }
 
     @GetMapping("/")
@@ -31,7 +31,7 @@ public class AuthController {
     @PostMapping("/addNumber")
     public String addNumber(@ModelAttribute("numberForm") NumberForm numberForm,
                             Model model) {
-        if (!authServices.tryToAddNumber(numberForm)) {
+        if (!mainServices.tryToAddNumber(numberForm)) {
             model.addAttribute("info", "Podany numer jest już w książce telefonicznej!!!");
             return "addNumber";
         }
@@ -40,8 +40,15 @@ public class AuthController {
 
     @GetMapping("/allContacts")
     public String allContacts(Model model){
-        model.addAttribute("contacts", authServices.getAll());
+        model.addAttribute("contacts", mainServices.getAll());
         return "allContacts";
+    }
+
+    @GetMapping("/allContacts/{id}")
+    public String allContacts(@PathVariable("id") int id,
+                              Model model){
+        model.addAttribute("numberDetails", mainServices.getAllDetails(id));
+        return "showContact";
     }
 
 }

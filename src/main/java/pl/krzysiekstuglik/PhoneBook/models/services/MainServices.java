@@ -10,12 +10,12 @@ import pl.krzysiekstuglik.PhoneBook.models.repositories.NumberRepository;
 import java.util.List;
 
 @Service
-public class AuthServices {
+public class MainServices {
 
     final NumberRepository numberRepository;
 
     @Autowired
-    public AuthServices(NumberRepository numberRepository) {
+    public MainServices(NumberRepository numberRepository) {
         this.numberRepository = numberRepository;
     }
 
@@ -40,4 +40,7 @@ public class AuthServices {
         return numberRepository.findAll();
    }
 
+   public NumberEntity getAllDetails(int id){
+        return numberRepository.findById(id).get();
+   }
 }
