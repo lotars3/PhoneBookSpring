@@ -19,10 +19,7 @@ public class AuthServices {
         this.numberRepository = numberRepository;
     }
 
-    @GetMapping("/")
-    public String index(){
-        return "index";
-    }
+
 
     public boolean tryToAddNumber(NumberForm numberForm){
         if (numberRepository.existsByNumber(numberForm.getNumber())){

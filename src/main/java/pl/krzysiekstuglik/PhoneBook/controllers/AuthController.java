@@ -17,6 +17,11 @@ public class AuthController {
         this.authServices = authServices;
     }
 
+    @GetMapping("/")
+    public String index(){
+        return "index";
+    }
+
     @GetMapping("/addNumber")
     public String addNumber(Model model) {
         model.addAttribute("numberForm", new NumberForm());
