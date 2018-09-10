@@ -1,4 +1,4 @@
 # PhoneBookSpring
 
-This is a project for practicing Spring Boot. 
+This is a project for practicing Spring Boot.
 
