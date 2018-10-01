@@ -1,11 +1,11 @@
-package pl.krzysiekstuglik.PhoneBook.controllers;
+package pl.szymonsmenda.PhoneBook.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import pl.krzysiekstuglik.PhoneBook.models.forms.NumberForm;
-import pl.krzysiekstuglik.PhoneBook.models.services.MainServices;
+import pl.szymonsmenda.PhoneBook.models.forms.NumberForm;
+import pl.szymonsmenda.PhoneBook.models.services.MainServices;
 
 @Controller
 public class MainController {

@@ -1,11 +1,10 @@
-package pl.krzysiekstuglik.PhoneBook.models.services;
+package pl.szymonsmenda.PhoneBook.models.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import pl.krzysiekstuglik.PhoneBook.models.NumberEntity;
-import pl.krzysiekstuglik.PhoneBook.models.forms.NumberForm;
-import pl.krzysiekstuglik.PhoneBook.models.repositories.NumberRepository;
+import pl.szymonsmenda.PhoneBook.models.NumberEntity;
+import pl.szymonsmenda.PhoneBook.models.forms.NumberForm;
+import pl.szymonsmenda.PhoneBook.models.repositories.NumberRepository;
 
 import java.util.List;
 

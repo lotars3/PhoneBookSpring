@@ -1,8 +1,8 @@
-package pl.krzysiekstuglik.PhoneBook.models.repositories;
+package pl.szymonsmenda.PhoneBook.models.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import pl.krzysiekstuglik.PhoneBook.models.NumberEntity;
+import pl.szymonsmenda.PhoneBook.models.NumberEntity;
 
 import java.util.List;
 

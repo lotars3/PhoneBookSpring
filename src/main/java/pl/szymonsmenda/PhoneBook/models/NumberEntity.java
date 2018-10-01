@@ -1,11 +1,11 @@
-package pl.krzysiekstuglik.PhoneBook.models;
+package pl.szymonsmenda.PhoneBook.models;
 
 import lombok.Data;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "numberbook")
+@Table(name = "phonebook")
 @Data
 public class NumberEntity {
     @Id

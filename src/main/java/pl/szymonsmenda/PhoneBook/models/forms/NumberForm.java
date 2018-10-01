@@ -1,4 +1,4 @@
-package pl.krzysiekstuglik.PhoneBook.models.forms;
+package pl.szymonsmenda.PhoneBook.models.forms;
 
 import lombok.Data;
 
